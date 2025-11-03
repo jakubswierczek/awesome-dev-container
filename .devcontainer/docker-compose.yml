@@ -10,7 +10,7 @@ services:
 
     environment:
       - NEXT_TELEMETRY_DISABLED=1
-      - PNPM_HOME=/home/node/.local/share/pnpm
+      - PNPM_HOME=/home/vscode/.local/share/pnpm
 
     command: sleep infinity
 
