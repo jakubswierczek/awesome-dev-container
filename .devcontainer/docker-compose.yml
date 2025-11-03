@@ -6,6 +6,7 @@ services:
       - ..:/workspaces/${localWorkspaceFolderBasename}:cached
       - claude-config:/home/vscode/.claude
       - vscode-config:/home/vscode/.config
+      - linuxbrew:/home/linuxbrew/.linuxbrew
 
     environment:
       - NEXT_TELEMETRY_DISABLED=1
@@ -21,3 +22,5 @@ volumes:
     name: claude-shared-config
   vscode-config:
     name: vscode-shared-config
+  linuxbrew:
+    name: linuxbrew-shared
