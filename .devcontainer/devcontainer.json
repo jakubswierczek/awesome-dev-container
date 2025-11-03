@@ -1,6 +1,8 @@
 {
   "name": "Awesome dev container",
-  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/devcontainers/features/github-cli:1": {},
@@ -8,10 +10,6 @@
     "ghcr.io/devcontainers/features/python:1": {},
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
     "ghcr.io/flexwie/devcontainer-features/op:1": {}
-  },
-  "containerEnv": {
-    "NEXT_TELEMETRY_DISABLED": "1",
-    "PNPM_HOME": "/home/node/.local/share/pnpm"
   },
   "postCreateCommand": ".devcontainer/post-create.sh",
   "customizations": {
